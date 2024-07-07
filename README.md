@@ -44,3 +44,11 @@ Com isso você deverá estar rodando o script de geração de áudios, a partir 
 		                file_path="output2.wav",
 		                split_sentences=True
 		                )
+
+
+
+
+
+
+
+![Kiku](imgs/mel.png)
