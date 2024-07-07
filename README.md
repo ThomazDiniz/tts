@@ -36,8 +36,6 @@ Com isso você deverá estar rodando o script de geração de áudios, a partir 
 
 6. O código necessário para rodar o mínimo é:
 
-``
-
 	#imports
 	from TTS.api import TTS
 	tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=False)
@@ -47,5 +45,4 @@ Com isso você deverá estar rodando o script de geração de áudios, a partir 
 	                split_sentences=True
 	                )
 
-``
 
