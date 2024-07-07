@@ -36,13 +36,12 @@ Com isso você deverá estar rodando o script de geração de áudios, a partir 
 
 6. O código necessário para rodar o mínimo é:
 
+
 	#imports
 	from TTS.api import TTS
 	tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=False)
-	# generate speech by cloning a voice using default settings
+	#generate speech by cloning a voice using default settings
 	tts.tts_to_file(text="Nunca tinha tido coragem de cantar, mas agora tudo isto mudou",
 	                file_path="output2.wav",
 	                split_sentences=True
 	                )
-
-
