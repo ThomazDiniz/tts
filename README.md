@@ -52,3 +52,7 @@ Com isso você deverá estar rodando o script de geração de áudios, a partir 
 
 
 ![Kiku](imgs/mel.png)
+![Kiku](results/xtts_v2/0.wav)
+
+
+
