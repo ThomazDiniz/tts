@@ -43,37 +43,6 @@
 			Nele os autores se utilizam de um conjunto de dados chamado Common Voice para treinar o modelo Tacotron e gerar audio em português brasileiro.
 		</p>
 
-		<h2>Avaliação</h2>
-		<p>
-			No artigo os autores avaliam a qualidade do modelo a partir de contagens manuais de "palavras puladas" (palavras que foram ignoradas pelo tacotron no momento da sintetização de voz) e palavras pronunciadas de maneira incorreta.
-
-			O artigo pode ser lido no DOI:10.14209/sbrt.2021.1570727280.
-
-
-			<table>
-				<tr>
-					<th>Tipo de Erro</th>
-					<th>XTTS</th>
-					<th>YOUR TTS</th>
-				</tr>
-
-
-				<tr>
-					<td>Palavras puladas</th>
-					<td>0</th>
-					<td>0</th>
-				</tr>
-
-
-				<tr>
-					<td>Erros de pronúncia</th>
-					<td>10</th>
-					<td>50</th>
-				</tr>
-
-			</table>
-		</p>
-
 		<h2>Reprodução</h2>
 		<p>
 			Ao tentar executar os passos definidos no artigo tivemos bastante problemas de compatibilidade com o hardware para executar as funções, portanto nesta reprodução nos ateremos a utilizar uma outra implementação e outro modelo, mas avaliar de maneira manual este outro modelo da mesma maneira que foi avaliada no artigo (contagem de erros de pronúncia e palavras ignoradas pelo modelo). Utilizamos neste artigo modelos TTS que são multilinguais (modelos com capacidade de gerar para diversas linguas, inclusive português em alguns casos).
@@ -82,6 +51,45 @@
 
 			Os modelos que decidimos utilizar foram: <b>XTTS</b> e <b>YOUR-TTS</b>. <a href="https://github.com/coqui-ai/TTS"> Ambos das implementações do disponíveis deste repositório do COQUI-AI</a>
 		</p>
+
+
+		<h2>Avaliação</h2>
+		<p>
+			No artigo os autores avaliam a qualidade do modelo a partir de contagens manuais de "palavras puladas" (palavras que foram ignoradas pelo tacotron no momento da sintetização de voz) e palavras pronunciadas de maneira incorreta.
+
+			O artigo pode ser lido no DOI:10.14209/sbrt.2021.1570727280.
+
+			A partir da técnica de avalaiação do autores, fizemos um trabalho manual de verificação dos audios que geramos com os dois modelos (XTTS e YOUR_TTS) e com isso obtivemos a seguinte tabela de erros:
+		</p>
+
+		<table>
+			<tr>
+				<th>Tipo de Erro</th>
+				<th>XTTS</th>
+				<th>YOUR TTS</th>
+			</tr>
+
+
+			<tr>
+				<td>Palavras puladas</th>
+				<td>0</th>
+				<td>0</th>
+			</tr>
+
+
+			<tr>
+				<td>Erros de pronúncia</th>
+				<td>10</th>
+				<td>50</th>
+			</tr>
+
+		</table>
+		<p>
+			A partir desta tabela é possível notar que obtivemos um total de 0 erros de palavras puladas para ambos os modelos. Mas obtivemos um total de 10 erros de pronúncia para o modelo XTTs e 50 erros de pronúncia para o modelo YOUR-TTS. 
+
+			O resultado dos audios obtidos a partir dos modelos é possível ouvir na tabela abaixo. Os audios do modelo XTTs possuem uma qualidade melhor, mais natural e humana. Já os audios do modelo YOUR-TTS são mais robóticos e de qualidade um pouco menor tanto de pronúncia quanto de entonação.
+		</p>
+
 
 		<h2>Rodando este projeto</h2>
 		<a href="https://github.com/ThomazDiniz/tts">
