@@ -4,6 +4,8 @@ O artigo selecionado para reprodução foi o "Conversão Texto-Fala para o Portu
 
 Nele os autores se utilizam de um conjunto de dados chamado Common Voice para treinar o modelo Tacotron e gerar audio em português brasileiro.
 
+[Para exemplos do modelo é possível acessar este link do github pages.](https://thomazdiniz.github.io/tts/)
+
 ## Avaliação
 
 No artigo os autores avaliam a qualidade do modelo a partir de contagens manuais de "palavras puladas" (palavras que foram ignoradas pelo tacotron no momento da sintetização de voz) e palavras pronunciadas de maneira incorreta.
@@ -14,7 +16,7 @@ O artigo pode ser lido no DOI:10.14209/sbrt.2021.1570727280 e [ele acompanha des
 
 Ao tentar executar os passos definidos no artigo tivemos bastante problemas de compatibilidade com o hardware para executar as funções, portanto nesta reprodução nos ateremos a utilizar uma outra implementação e outro modelo, mas avaliar de maneira manual este outro modelo da mesma maneira que foi avaliada no artigo (contagem de erros de pronúncia e palavras ignoradas pelo modelo). Utilizamos neste artigo modelos TTS que são multilinguais (modelos com capacidade de gerar para diversas linguas, inclusive português em alguns casos).
 
-Avaliaremos separadamente alguns modelos da mesma forma que o artigo original para avaliar a capacidade destes modelos de gerar sentenças em português brasileiro.
+Avaliamos separadamente alguns modelos da mesma forma que o artigo original para avaliar a capacidade destes modelos de gerar sentenças em português brasileiro.
 
 ## Rodando este projeto
 
@@ -47,12 +49,6 @@ Com isso você deverá estar rodando o script de geração de áudios, a partir 
 
 
 
-
-
-
-
-![Kiku](imgs/mel.png)
-![Kiku](results/xtts_v2/0.wav)
 
 
 
