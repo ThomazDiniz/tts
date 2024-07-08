@@ -5,6 +5,8 @@ O artigo selecionado para reprodução foi o "Conversão Texto-Fala para o Portu
 Nele os autores se utilizam de um conjunto de dados chamado Common Voice para treinar o modelo Tacotron e gerar audio em português brasileiro.
 
 [Para exemplos do modelo é possível acessar este link do github pages.](https://thomazdiniz.github.io/tts/)
+
+
 [Link para a planilha de avaliação das frases obtidas desta reprodução.](https://docs.google.com/spreadsheets/d/1hLVMWFqybs8_mGBTY7nuFGYM60moeTYtWoE_ZlB2X1U/edit?usp=sharing)
 
 ## Avaliação
