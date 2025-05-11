@@ -5,15 +5,28 @@ python -m venv .venv
 pip install setuptools wheel
 python.exe -m pip install --upgrade pip
 pip install TTS
+pip install pyaudio
+pip install speechrecognition
+pip install levenshtein
 '''
+
 from TTS.api import TTS
+
+print(Levenshtein.distance("aab","aac"))
 
 def generate_sentences(sentences,model_path,model,training):
     final_model_path = model_path + model[0]
     tts = TTS(final_model_path, gpu=False)
     i = 0
     for sentence in sentences:
-        tts.tts_to_file(text=sentence, file_path=".\\results\\" + model[0] + "\\" + str(i) + ".wav", speaker_wav=training, language=model[1], split_sentences=True)
+        #generate path
+        path = ".\\results\\" + model[0] + "\\" + str(i) + ".wav"
+        
+        #generate audio file
+        tts.tts_to_file(text=sentence, file_path=path, speaker_wav=training, language=model[1], split_sentences=True)
+        
+        #get text generated
+
         i += 1
 
     tts.tts_to_file(text="A frase está em inglês, primo.", file_path=".\\testing\\0_" + model[0] + ".wav", speaker_wav=training, language=model[1], split_sentences=True)
@@ -37,7 +50,6 @@ for model in models:
 #tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=False)
 #tts = TTS("tts_models/multilingual/multi-dataset/your_tts", gpu=False)
 #tts = TTS("tts_models/en/ek1/tacotron2", gpu=False)
-
 
 
 '''
